@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_device_address"
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/device_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_state"
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/connection_state"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/disconnected"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_data"
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/data_value"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/no_data"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+        <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="10dp">
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_service"
+                  android:textSize="18sp"/>
+        <Space android:layout_width="5dp"
+               android:layout_height="wrap_content"/>
+        <TextView android:id="@+id/service_name"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:text="@string/no_service"
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    
+    <!--  电池电量显示 -->
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:layout_margin="10dp"
+                  >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textview_show"
+                  android:text="电池电量是："
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    <!--  运动步数显示 -->
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:layout_margin="10dp"
+                  >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textview_show2"
+                  android:text="运动的总步数是："
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    <!--  睡眠数显示 -->
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:layout_margin="10dp"
+                  >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textview_show3"
+                  android:text="睡眠数是："
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    
+    <!--  睡眠数显示 -->
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="visible"
+                  android:layout_margin="10dp"
+                  >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:id="@+id/textview_show4"
+                  android:text="运行时间（毫秒）："
+                  android:textSize="18sp"/>
+    </LinearLayout>
+    
+    <!--  发送数据 -->
+    <LinearLayout android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:visibility="gone"
+                  android:layout_margin="10dp"
+                  >
+        <TextView android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="@string/label_input"
+                  android:textSize="18sp"/>
+        
+
+        <Button
+            android:id="@+id/send_value"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="left"
+            android:maxLines="1"
+            android:text="@string/send"
+            
+            android:textSize="12sp" />
+
+    </LinearLayout>
+    <ExpandableListView android:id="@+id/gatt_services_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+</LinearLayout>
