@@ -258,10 +258,10 @@ public class DeviceControlActivity extends Activity {
             	Logger.e(TAG, "获取到的数据：" + NumberUtils.bytes2HexString(bytes));
             	displayData(NumberUtils.bytes2HexString(bytes));
             	parseBytesArray(bytes);
-            	if(success%20 == 0){
+            	/*if(success%20 == 0){
             		// 开启监听 8002数据改变
            		 	mBluetoothLeService.setCharacteristicNotification(mGattPedometerCharacteristic_1, true );
-            	}
+            	}*/
             	
             }
         }
